@@ -1,0 +1,43 @@
+{
+  "signatures": [],
+  "signed": {
+    "_type": "layout",
+    "expires": "2030-11-18T16:06:36Z",
+    "readme": "demo",
+    "keys": {
+      ${KEY_LAYOUT},
+      ${KEY_USER}
+    },
+    "inspect": [],
+    "steps": [
+      { "_type": "step",
+        "name": "demo",
+        "threshold": 1,
+        "expected_command": ["make", "good"],
+        "expected_materials": [
+          [
+            "ALLOW",
+            "Makefile"
+          ],
+          [
+          "DISALLOW",
+            "*"
+          ]
+        ],
+        "expected_products": [
+          [
+            "ALLOW",
+            "output.txt"
+          ],
+          [
+          "DISALLOW",
+            "*"
+          ]
+        ],
+        "pubkeys": [
+          "${KEY_USER_ID}"
+        ]
+      }
+    ]
+  }
+}
